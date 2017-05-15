@@ -105,7 +105,8 @@ public class Creation {
 		for (int row = 0; row < 20; row++) {
 			for (int column = 0; column < 20; column++) {
 				Rectangle r = new Rectangle();
-				r.setHeight(27); r.setWidth(27);
+				r.setHeight(27); 
+				r.setWidth(27);
 				r.setFill(Color.WHITE);
 				/*
 				 * Formula to get Rectangle at index = row*rowCount + column
@@ -151,11 +152,11 @@ public class Creation {
 		File chosen = fd.showOpenDialog(null);
 		if (chosen == null) {
 			System.out.println("Choose a valid file!");
-			save();
 		} else {
 			animation.writeToFile(chosen);
 		}
 	}
+	
 	
 	@FXML
 	public void switchToAnim() {

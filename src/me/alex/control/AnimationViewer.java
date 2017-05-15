@@ -43,7 +43,8 @@ public class AnimationViewer {
 		for (int row = 0; row < 20; row++) {
 			for (int column = 0; column < 20; column++) {
 				Rectangle r = new Rectangle();
-				r.setHeight(27); r.setWidth(27);
+				r.setHeight(27); 
+				r.setWidth(27);
 				r.setFill(Color.YELLOW);
 				gp.add(r, column, row);
 			}

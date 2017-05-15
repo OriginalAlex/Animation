@@ -39,23 +39,17 @@ public class Frame {
 	
 	@Override
 	public String toString() {
-		String response = "";
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < frame.length; i++) { 
-			/*
-			 * Creates a String in the form:
-			 * CCCCCCCCCCCCCCCCCCCCCCCC/CCCCCCCCCCCCCCCCCCCCCCCC/CCCCCCCCCCCCCCCCCCCCCCCC
-			 * Where C is any colour and "/" is the seperator to signify a change in column.
-			 */
 			Paint[] arr = frame[i];
 			for (Paint r : arr) {
-				String s = colourToString(r);
-				response += s;
+				sb.append(colourToString(r));
 			}
 			if (i != frame.length-1) {
-				response += "/";
+				sb.append("/");
 			}
 		}
-		return response;
+		return sb.toString();
 	}
 
 }

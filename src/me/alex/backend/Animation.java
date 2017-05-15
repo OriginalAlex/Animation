@@ -20,12 +20,6 @@ public class Animation {
 	}
 	
 	public void writeToFile(File target) { // Create file directory
-		/*
-		 * It will be stored in the format:
-		 * CCCCCCCCCCCCCCCCCCCCCCCCCCC/CCCCCCCCCCCCCCCCCCCCCCCCC/CCCCCCCCCCCCCCCCC
-		 * (NEXT FRAME)
-		 * Where C is representative of any colour used in the frame
-		 */
 		try (PrintWriter pw = new PrintWriter(new FileWriter(target))) {
 			for (Frame f : allFrames) {
 				pw.write(f.toString() + System.getProperty("line.separator"));
